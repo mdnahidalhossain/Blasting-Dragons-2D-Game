@@ -1,0 +1,19 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Enemy : MonoBehaviour
+{
+    
+    public void Die() {
+        GetComponent<SpriteRenderer> ().enabled = false;
+        GetComponent<Collider2D> ().enabled = false;
+        // GetComponent<AudioSource>().Play();
+    }
+
+    public void Respawn() 
+    {
+        GetComponent<SpriteRenderer> ().enabled = true;
+        GetComponent<Collider2D> ().enabled = true;
+    }
+}
